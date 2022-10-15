@@ -3,13 +3,6 @@ package ssmyk.example.lab1.configuration;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import pl.edu.pg.eti.kask.rpg.character.entity.Character;
-import pl.edu.pg.eti.kask.rpg.character.entity.Profession;
-import pl.edu.pg.eti.kask.rpg.character.service.CharacterService;
-import pl.edu.pg.eti.kask.rpg.character.service.ProfessionService;
-import pl.edu.pg.eti.kask.rpg.digest.Sha256Utility;
-import pl.edu.pg.eti.kask.rpg.user.entity.User;
-import pl.edu.pg.eti.kask.rpg.user.service.UserService;
 
 import javax.annotation.PostConstruct;
 import java.io.InputStream;
@@ -32,11 +25,6 @@ public class InitializedData {
      * Service for users operations.
      */
     private final UserService userService;
-
-    /**
-     * Service for professions operations.
-     */
-    private final ProfessionService professionService;
 
     /**
      *

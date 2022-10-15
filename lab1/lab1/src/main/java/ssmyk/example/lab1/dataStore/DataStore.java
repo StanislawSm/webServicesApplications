@@ -1,7 +1,10 @@
-package ssmyk.example.lab1;
+package ssmyk.example.lab1.dataStore;
 
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Component;
+import ssmyk.example.lab1.serialization.CloningUtility;
+import ssmyk.example.lab1.author.entity.Author;
+import ssmyk.example.lab1.book.entity.Book;
 
 import java.util.*;
 import java.util.stream.Collectors;

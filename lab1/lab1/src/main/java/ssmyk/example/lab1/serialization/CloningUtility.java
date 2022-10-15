@@ -1,4 +1,4 @@
-package ssmyk.example.lab1;
+package ssmyk.example.lab1.serialization;
 
 import lombok.extern.java.Log;
 
