@@ -17,9 +17,6 @@ public class CommandLine implements CommandLineRunner {
      */
     private BookService bookService;
 
-    /**
-     * @param characterService service for managing characters
-     */
     @Autowired
     public CommandLine(BookService bookService) {
         this.bookService = bookService;
