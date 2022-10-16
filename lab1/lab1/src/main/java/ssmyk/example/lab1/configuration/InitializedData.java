@@ -5,11 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ssmyk.example.lab1.author.entity.Author;
 import ssmyk.example.lab1.author.service.AuthorService;
+import ssmyk.example.lab1.book.entity.Book;
 import ssmyk.example.lab1.book.service.BookService;
 
 import javax.annotation.PostConstruct;
 import java.io.InputStream;
-import java.time.LocalDate;
+
 
 /**
  * Listener started automatically on CDI application context initialized. Injects proxy to the services and fills
@@ -42,107 +43,48 @@ public class InitializedData {
     @PostConstruct
     private synchronized void init() {
         Author author1 = Author.builder()
-                .login("admin")
-                .name("Adam")
-                .surname("Cormel")
-                .birthDate(LocalDate.of(1990, 10, 21))
-                .email("admin@simplerpg.example.com")
-                .password(Sha256Utility.hash("adminadmin"))
+                .name("John Smith")
+                .yearOfBirth(1983)
+                .country("USA")
                 .build();
 
-        User kevin = User.builder()
-                .login("kevin")
-                .name("Kevin")
-                .surname("Pear")
-                .birthDate(LocalDate.of(2001, 1, 16))
-                .email("kevin@example.com")
-                .password(Sha256Utility.hash("useruser"))
+        Author author2 = Author.builder()
+                .name("Jan Kowalski")
+                .yearOfBirth(1963)
+                .country("Poland")
                 .build();
 
-        User alice = User.builder()
-                .login("alice")
-                .name("Alice")
-                .surname("Grape")
-                .birthDate(LocalDate.of(2002, 3, 19))
-                .email("alice@example.com")
-                .password(Sha256Utility.hash("useruser"))
+        Author author3 = Author.builder()
+                .name("William John")
+                .yearOfBirth(1985)
+                .country("United Kingdom")
                 .build();
 
-        userService.create(admin);
-        userService.create(kevin);
-        userService.create(alice);
+        authorService.create(author1);
+        authorService.create(author2);
+        authorService.create(author3);
 
-        Profession bard = Profession.builder().name("Bard").build();
-        Profession cleric = Profession.builder().name("Cleric").build();
-        Profession warrior = Profession.builder().name("Warrior").build();
-        Profession rogue = Profession.builder().name("Rogue").build();
-
-        professionService.create(bard);
-        professionService.create(cleric);
-        professionService.create(warrior);
-        professionService.create(rogue);
-
-        Character calvian = Character.builder()
-                .name("Calvian")
-                .age(18)
-                .background("A yong bard with some infernal roots.")
-                .experience(0)
-                .level(1)
-                .profession(bard)
-                .charisma(16)
-                .constitution(12)
-                .strength(8)
-                .portrait(getResourceAsByteArray("avatar/calvian.png"))//package relative path
-                .user(kevin)
+        Book book1 = Book.builder()
+                .isbn(54684654L)
+                .title("Something")
+                .yearOfPublication(2002)
                 .build();
 
-        Character uhlbrecht = Character.builder()
-                .name("Uhlbrecht")
-                .age(37)
-                .background("Quite experienced half-orc warrior.")
-                .experience(0)
-                .level(1)
-                .profession(warrior)
-                .charisma(8)
-                .constitution(10)
-                .strength(18)
-                .portrait(getResourceAsByteArray("avatar/uhlbrecht.png"))//package relative path
-                .user(kevin)
+        Book book2 = Book.builder()
+                .isbn(2135174865L)
+                .title("Pomorze")
+                .yearOfPublication(1998)
                 .build();
 
-        Character eloise = Character.builder()
-                .name("Eloise")
-                .age(32)
-                .background("Human cleric.")
-                .experience(0)
-                .level(1)
-                .profession(cleric)
-                .charisma(8)
-                .constitution(12)
-                .strength(14)
-                .portrait(getResourceAsByteArray("avatar/eloise.png"))//package relative path
-                .user(alice)
+        Book book3 = Book.builder()
+                .isbn(98518687L)
+                .title("Best things")
+                .yearOfPublication(2010)
                 .build();
 
-        Character zereni = Character.builder()
-                .name("Zereni")
-                .age(20)
-                .background("Half elf rogue.")
-                .experience(0)
-                .level(1)
-                .profession(rogue)
-                .charisma(14)
-                .constitution(12)
-                .strength(10)
-                .portrait(getResourceAsByteArray("avatar/zereni.png"))//package relative path
-                .user(alice)
-                .build();
-
-        characterService.create(calvian);
-        characterService.create(uhlbrecht);
-        characterService.create(eloise);
-        characterService.create(zereni);
-
+        bookService.create(book1);
+        bookService.create(book2);
+        bookService.create(book3);
     }
 
     /**
@@ -152,9 +94,10 @@ public class InitializedData {
     @SneakyThrows
     private byte[] getResourceAsByteArray(String name) {
         try (InputStream is = this.getClass().getResourceAsStream(name)) {
+            assert is != null;
             return is.readAllBytes();
         } catch (NullPointerException exception){
-            System.out.println(exception);
+            System.out.println(exception.getMessage());
             return null;
         }
     }

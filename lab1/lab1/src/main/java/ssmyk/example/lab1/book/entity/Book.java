@@ -15,5 +15,6 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = false)
 public class Book implements Serializable {
     private Long isbn;
-    private String name;
+    private String title;
+    private int yearOfPublication;
 }

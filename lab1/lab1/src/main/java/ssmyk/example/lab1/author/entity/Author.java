@@ -16,4 +16,6 @@ import java.io.Serializable;
 public class Author implements Serializable {
 
     private String name;
+    private int yearOfBirth;
+    private String country;
 }
