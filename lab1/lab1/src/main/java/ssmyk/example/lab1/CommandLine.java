@@ -18,8 +18,8 @@ import java.util.Scanner;
 @Component
 public class CommandLine implements CommandLineRunner {
 
-    private BookService bookService;
-    private AuthorService authorService;
+    private final BookService bookService;
+    private final AuthorService authorService;
 
     @Autowired
     public CommandLine(BookService bookService, AuthorService authorService) {
@@ -32,6 +32,7 @@ public class CommandLine implements CommandLineRunner {
         System.out.println("Choose command:");
         System.out.println("All authors");
         System.out.println("All books");
+        System.out.println("All entities");
         System.out.println("Add a book");
         System.out.println("Remove a book");
         System.out.println("Quit");
@@ -88,8 +89,8 @@ public class CommandLine implements CommandLineRunner {
     }
 
     private Author createAuthor(String authorName) {
-        Scanner scanner = new Scanner(System.in);
 
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Add new author");
         System.out.printf("Name: %s\n", authorName);
         System.out.print("Year of birth: ");
@@ -116,6 +117,11 @@ public class CommandLine implements CommandLineRunner {
         bookService.findAll().forEach(System.out::println);
     }
 
+    private void printAllEntities() {
+        printAllAuthors();
+        printAllBooks();
+    }
+
     private void printAllBooksByIsbn() {
         List<Book> books = bookService.findAll();
         books.sort((Book b1, Book b2) -> (int) (b1.getIsbn() - b2.getIsbn()));
@@ -139,6 +145,8 @@ public class CommandLine implements CommandLineRunner {
                 printAllBooks();
             } else if (command.equalsIgnoreCase("Add a book")) {
                 createBook();
+            } else if (command.equalsIgnoreCase("All entities")) {
+                printAllEntities();
             } else if (command.equalsIgnoreCase("Remove a book")) {
                 deleteBook();
             } else {

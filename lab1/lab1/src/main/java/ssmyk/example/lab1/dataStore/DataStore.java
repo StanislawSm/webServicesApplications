@@ -13,9 +13,8 @@ import java.util.stream.Collectors;
 @Component
 public class DataStore {
 
-    private Set<Book> books = new HashSet<>();
-    private Set<Author> authors = new HashSet<>();
-
+    private final Set<Book> books = new HashSet<>();
+    private final Set<Author> authors = new HashSet<>();
 
     public synchronized List<Book> findAllBooks() {
         return new ArrayList<>(books);
