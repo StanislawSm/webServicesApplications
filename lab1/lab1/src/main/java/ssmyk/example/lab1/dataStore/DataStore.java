@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 public class DataStore {
 
     private Set<Book> books = new HashSet<>();
-
     private Set<Author> authors = new HashSet<>();
 
 
@@ -101,5 +100,4 @@ public class DataStore {
                             String.format("The author \"%s\" does not exist", name));
                 });
     }
-
 }

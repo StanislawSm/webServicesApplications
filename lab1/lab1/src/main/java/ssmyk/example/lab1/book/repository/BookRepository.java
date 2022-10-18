@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import ssmyk.example.lab1.book.entity.Book;
 import ssmyk.example.lab1.dataStore.DataStore;
 import ssmyk.example.lab1.repository.Repository;
-
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * Repository for character entity. Repositories should be used in business layer (e.g.: in services).
@@ -15,14 +13,8 @@ import java.util.stream.Collectors;
 @org.springframework.stereotype.Repository
 public class BookRepository implements Repository<Book, Long> {
 
-    /**
-     * Underlying data store. In future should be replaced with database connection.
-     */
     private DataStore store;
 
-    /**
-     * @param store data store
-     */
     @Autowired
     public BookRepository(DataStore store) {
         this.store = store;

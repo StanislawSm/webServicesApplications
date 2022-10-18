@@ -20,14 +20,7 @@ import java.io.InputStream;
 @Component
 public class InitializedData {
 
-    /**
-     * Service for characters operations.
-     */
     private final BookService bookService;
-
-    /**
-     * Service for users operations.
-     */
     private final AuthorService authorService;
 
     @Autowired
@@ -36,10 +29,6 @@ public class InitializedData {
         this.authorService = authorService;
     }
 
-    /**
-     * Initializes database with some example values. Should be called after creating this object. This object should
-     * be created only once.
-     */
     @PostConstruct
     private synchronized void init() {
         Author author1 = Author.builder()
@@ -68,23 +57,42 @@ public class InitializedData {
                 .isbn(54684654L)
                 .title("Something")
                 .yearOfPublication(2002)
+                .author(author1)
                 .build();
 
         Book book2 = Book.builder()
                 .isbn(2135174865L)
                 .title("Pomorze")
                 .yearOfPublication(1998)
+                .author(author2)
                 .build();
 
         Book book3 = Book.builder()
                 .isbn(98518687L)
                 .title("Best things")
                 .yearOfPublication(2010)
+                .author(author1)
+                .build();
+
+        Book book4 = Book.builder()
+                .isbn(9842342323L)
+                .title("Worst things")
+                .author(author3)
+                .yearOfPublication(2010)
+                .build();
+
+        Book book5 = Book.builder()
+                .isbn(234234233L)
+                .title("Kujawy")
+                .yearOfPublication(2010)
+                .author(author2)
                 .build();
 
         bookService.create(book1);
         bookService.create(book2);
         bookService.create(book3);
+        bookService.create(book4);
+        bookService.create(book5);
     }
 
     /**

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ssmyk.example.lab1.author.entity.Author;
 import ssmyk.example.lab1.author.repository.AuthorRepository;
-
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,6 +19,10 @@ public class AuthorService {
 
     public Optional<Author> find(String name) {
         return repository.find(name);
+    }
+
+    public List<Author> findAll() {
+        return repository.findAll();
     }
 
     public void create(Author author) {

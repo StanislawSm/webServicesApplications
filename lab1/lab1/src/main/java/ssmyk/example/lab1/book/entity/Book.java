@@ -1,9 +1,8 @@
 package ssmyk.example.lab1.book.entity;
 
-
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-
+import ssmyk.example.lab1.author.entity.Author;
 import java.io.Serializable;
 
 @Getter
@@ -17,4 +16,5 @@ public class Book implements Serializable {
     private Long isbn;
     private String title;
     private int yearOfPublication;
+    private Author author;
 }
