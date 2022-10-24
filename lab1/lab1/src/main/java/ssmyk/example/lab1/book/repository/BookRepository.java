@@ -7,9 +7,6 @@ import ssmyk.example.lab1.repository.Repository;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Repository for character entity. Repositories should be used in business layer (e.g.: in services).
- */
 @org.springframework.stereotype.Repository
 public class BookRepository implements Repository<Book, Long> {
 
@@ -44,22 +41,5 @@ public class BookRepository implements Repository<Book, Long> {
     public void update(Book entity) {
         store.updateBook(entity);
     }
-
-
-    /*public Optional<Character> findByIdAndUser(Long id, User user) {
-        return store.findAllCharacters().stream()
-                .filter(character -> character.getUser().equals(user))
-                .filter(character -> character.getId().equals(id))
-                .findFirst()
-                .map(CloningUtility::clone);
-    }
-
-    public List<Character> findAllByUser(User user) {
-        return store.findAllCharacters().stream()
-                .filter(character -> character.getUser().equals(user))
-                .map(CloningUtility::clone)
-                .collect(Collectors.toList());
-    }*/
-
 }
 

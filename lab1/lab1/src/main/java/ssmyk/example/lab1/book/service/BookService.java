@@ -22,10 +22,6 @@ public class BookService {
         return repository.find(isbn);
     }
 
-    /*    public Optional<Author> find(Author author, Long isbn) {
-        return repository.findByIdAndUser(id, user);
-    }*/
-
     public List<Book> findAll() {
         return repository.findAll();
     }

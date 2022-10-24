@@ -3,7 +3,6 @@ package ssmyk.example.lab1.author.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import ssmyk.example.lab1.author.entity.Author;
-import ssmyk.example.lab1.book.entity.Book;
 import ssmyk.example.lab1.dataStore.DataStore;
 import ssmyk.example.lab1.repository.Repository;
 
@@ -37,12 +36,12 @@ public class AuthorRepository implements Repository<Author, String> {
 
     @Override
     public void delete(Author entity) {
-        throw new UnsupportedOperationException("Not implemented.");
+        store.deleteAuthor(entity.getName());
     }
 
     @Override
     public void update(Author entity) {
-        throw new UnsupportedOperationException("Not implemented.");
+        store.updateAuthor(entity);
     }
 
 }
