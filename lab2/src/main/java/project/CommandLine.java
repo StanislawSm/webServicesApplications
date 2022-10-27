@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 @Component
 public class CommandLine implements CommandLineRunner {
-    
+
     private final BookService bookService;
     private final AuthorService authorService;
 
