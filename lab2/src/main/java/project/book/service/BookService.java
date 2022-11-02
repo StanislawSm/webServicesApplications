@@ -2,6 +2,7 @@ package project.book.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import project.book.entity.Book;
 import project.book.repository.BookRepository;
 
@@ -20,23 +21,26 @@ public class BookService {
     }
 
     public Optional<Book> find(Long isbn) {
-        return repository.find(isbn);
+        return repository.findByIsbn(isbn);
     }
 
     public List<Book> findAll() {
         return repository.findAll();
     }
 
+    @Transactional
     public void create(Book book) {
-        repository.create(book);
+        repository.save(book);
     }
 
+    @Transactional
     public void update(Book book) {
-        repository.update(book);
+        repository.save(book);
     }
 
-    public void delete(Book book) {
-        repository.delete(repository.find(book.getIsbn()).orElseThrow());
+    @Transactional
+    public void delete(Long book) {
+        repository.deleteById(book);
     }
 
 }

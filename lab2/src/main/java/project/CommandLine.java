@@ -81,7 +81,7 @@ public class CommandLine implements CommandLineRunner {
 
         bookService.find(isbn).ifPresentOrElse(
                 book -> {
-                    bookService.delete(book);
+                    bookService.delete(book.getIsbn());
                     System.out.printf("Successfully deleted %s\n", book);
                 },
                 () -> System.out.printf("Cannot found the book with isbn: %d\n", isbn)

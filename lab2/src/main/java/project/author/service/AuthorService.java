@@ -2,6 +2,7 @@ package project.author.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import project.author.entity.Author;
 import project.author.repository.AuthorRepository;
 
@@ -19,23 +20,26 @@ public class AuthorService {
     }
 
     public Optional<Author> find(String name) {
-        return repository.find(name);
+        return repository.findByName(name);
     }
 
     public List<Author> findAll() {
         return repository.findAll();
     }
 
+    @Transactional
     public void create(Author author) {
-        repository.create(author);
+        repository.save(author);
     }
 
+    @Transactional
     public void update(Author author) {
-        repository.update(author);
+        repository.save(author);
     }
 
-    public void delete(Author author) {
-        repository.delete(repository.find(author.getName()).orElseThrow());
+    @Transactional
+    public void delete(String author) {
+        repository.deleteById(author);
     }
 }
 
