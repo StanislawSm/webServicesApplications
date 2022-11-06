@@ -2,6 +2,8 @@ package project.author.entity;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import net.bytebuddy.agent.builder.AgentBuilder;
+import org.hibernate.annotations.Fetch;
 import project.book.entity.Book;
 
 import javax.persistence.*;
@@ -23,7 +25,7 @@ public class Author implements Serializable {
     @Id
     private String name;
 
-    @Column(name = "yearofbirth")
+    @Column(name = "year_of_birth")
     private int yearOfBirth;
 
     private String country;

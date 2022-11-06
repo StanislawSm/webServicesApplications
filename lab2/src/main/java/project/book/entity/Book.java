@@ -24,9 +24,10 @@ public class Book implements Serializable {
 
     private String title;
 
+    @Column(name = "year_of_publication")
     private int yearOfPublication;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name ="author")
     private Author author;
 }
