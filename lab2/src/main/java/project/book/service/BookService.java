@@ -21,7 +21,7 @@ public class BookService {
     }
 
     public Optional<Book> find(Long isbn) {
-        return repository.findByIsbn(isbn);
+        return repository.findById(isbn);
     }
 
     public List<Book> findAll() {
