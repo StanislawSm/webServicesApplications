@@ -29,8 +29,8 @@ public class BookService {
     }
 
     @Transactional
-    public void create(Book book) {
-        repository.save(book);
+    public Book create(Book book) {
+        return repository.save(book);
     }
 
     @Transactional
