@@ -20,6 +20,7 @@ import java.util.function.Function;
 @RestController
 @RequestMapping("api/books")
 public class BookController {
+
     private final BookService bookService;
 
     private final AuthorService authorService;
@@ -66,7 +67,6 @@ public class BookController {
         }
     }
 
-
     @PutMapping("{isbn}")
     public ResponseEntity<Void> updateBook(@RequestBody PutBookRequest request, @PathVariable("isbn") long isbn) {
         Optional<Book> book = bookService.find(isbn);
@@ -78,5 +78,4 @@ public class BookController {
             return ResponseEntity.notFound().build();
         }
     }
-
 }

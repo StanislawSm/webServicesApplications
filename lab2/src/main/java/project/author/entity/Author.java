@@ -2,8 +2,6 @@ package project.author.entity;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import net.bytebuddy.agent.builder.AgentBuilder;
-import org.hibernate.annotations.Fetch;
 import project.book.entity.Book;
 
 import javax.persistence.*;
