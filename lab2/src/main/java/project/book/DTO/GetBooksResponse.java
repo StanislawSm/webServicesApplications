@@ -34,7 +34,7 @@ public class GetBooksResponse {
     @Singular
     private List<Book> books;
 
-    public static Function<Collection<Book>, GetBooksResponse> entityToDtoMapper() {
+    public static Function<Collection<project.book.entity.Book>, GetBooksResponse> entityToDtoMapper() {
         return books -> {
             GetBooksResponseBuilder response = GetBooksResponse.builder();
             books.stream()

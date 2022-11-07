@@ -28,8 +28,8 @@ public class AuthorService {
     }
 
     @Transactional
-    public void create(Author author) {
-        repository.save(author);
+    public Author create(Author author){
+         return repository.save(author);
     }
 
     @Transactional
