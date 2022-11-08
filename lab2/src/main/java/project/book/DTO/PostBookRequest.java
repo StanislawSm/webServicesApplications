@@ -20,11 +20,13 @@ public class PostBookRequest {
     private Long isbn;
     private String title;
     private String author;
+    private int yearOfPublication;
 
     public static Function<PostBookRequest, Book> dtoToEntityMapper(Function<String, Author> authorFunction) {
         return request -> Book.builder()
                 .author(authorFunction.apply(request.getAuthor()))
                 .title(request.getTitle())
+                .yearOfPublication(request.getYearOfPublication())
                 .build();
     }
 }

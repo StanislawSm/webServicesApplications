@@ -16,8 +16,7 @@ import java.util.function.BiFunction;
 @ToString
 @EqualsAndHashCode
 public class PutAuthorRequest {
-
-    private String name;
+    //private String name;
 
     private int yearOfBirth;
 
@@ -25,7 +24,6 @@ public class PutAuthorRequest {
 
     public static BiFunction<Author, PutAuthorRequest, Author> dtoToEntityUpdater() {
         return (author, request) -> {
-            author.setName(request.getName());
             author.setYearOfBirth(request.getYearOfBirth());
             author.setCountry(request.getCountry());
             return author;

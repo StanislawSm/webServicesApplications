@@ -2,10 +2,12 @@ package project.book.entity;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.Hibernate;
 import project.author.entity.Author;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -27,7 +29,20 @@ public class Book implements Serializable {
     @Column(name = "year_of_publication")
     private int yearOfPublication;
 
-    @ManyToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name ="author")
+    @ManyToOne
+    @JoinColumn(name ="authors")
     private Author author;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Book book = (Book) o;
+        return isbn != null && Objects.equals(isbn, book.isbn);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

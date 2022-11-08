@@ -1,67 +1,74 @@
-GET http://localhost:8080/api/cars
+GET http://localhost:8080/api/books
 Accept: application/json
 
 ###
 
-GET http://localhost:8080/api/cars/1
+GET http://localhost:8080/api/books/1
 Accept: application/json
 
 ###
 
-GET http://localhost:8080/api/cars/5
+GET http://localhost:8080/api/books/3
 Accept: application/json
 
 ###
 
-POST http://localhost:8080/api/cars
+POST http://localhost:8080/api/books
 Content-Type: application/json
 
 {
-  "name": "Hilux",
-  "horsePower": 150,
-  "producer": "Toyota"
+  "title": "asdf",
+  "yearOfPublication": 1489,
+  "author": "Jan Kowalski"
 }
 
 ###
 
-PUT http://localhost:8080/api/cars/5
+PUT http://localhost:8080/api/books/3
 Content-Type: application/json
 
 {
-  "name": "Lancer Evolution",
-  "horsePower": 260
+  "title": "New land",
+  "yearOfPublication": 2056
 }
 
 ###
 
-GET http://localhost:8080/api/producers
+GET http://localhost:8080/api/authors
 
 ###
 
-GET http://localhost:8080/api/producers/Mitsubishi
+GET http://localhost:8080/api/authors/Jan Kowalski
 
 ###
 
-DELETE http://localhost:8080/api/cars/5
+DELETE http://localhost:8080/api/books/2
 
 ###
 
-GET http://localhost:8080/api/producers/Mazda
+GET http://localhost:8080/api/authors/John Smith/books
 
 ###
 
-GET http://localhost:8080/api/producers/Mazda/cars
+DELETE http://localhost:8080/api/authors/Jan Kowalski
 
 ###
 
-DELETE http://localhost:8080/api/producers/Mazda
-
-###
-
-PUT http://localhost:8080/api/producers/Mitsubishi
+PUT http://localhost:8080/api/authors/asdf
 Content-Type: application/json
 
 {
-  "name": "Mitsubishi",
-  "foundationYear": 2022
+  "yearOfBirth": 1486,
+  "country": "Polska"
+}
+
+###
+
+POST http://localhost:8080/api/authors
+Content-Type: application/json
+
+{
+  "name": "asdf",
+  "yearOfBirth": 1489,
+  "country": "Pol"
 }

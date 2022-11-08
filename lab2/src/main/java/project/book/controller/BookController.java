@@ -40,7 +40,7 @@ public class BookController {
     }
 
     @GetMapping("{isbn}")
-    public ResponseEntity<GetBookResponse> getCar(@PathVariable("isbn") long isbn) {
+    public ResponseEntity<GetBookResponse> getBook(@PathVariable("isbn") long isbn) {
         return  bookService.find(isbn)
                 .map(value -> ResponseEntity.ok(GetBookResponse.entityToDtoMapper().apply(value)))
                 .orElseGet(() -> ResponseEntity.notFound().build());
