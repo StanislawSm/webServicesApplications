@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ebfb810-2ecc-43db-a3c9-6c1a589688b5" name="Changes" comment="small fixes">
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/CommandLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/LabApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/author/DTO/GetAuthorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/author/DTO/GetAuthorsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/author/DTO/PostAuthorRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/author/DTO/PutAuthorRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/author/controller/AuthorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/author/entity/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/author/repository/AuthorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/author/service/AuthorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/DTO/GetBookResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/DTO/GetBooksByAuthorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/DTO/GetBooksResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/DTO/PostBookRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/DTO/PutBookRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/book/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/configuration/InitializedData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/dataStore/DataStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booksModule/src/main/java/project/serialization/CloningUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/project/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/CommandLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/LabApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/author/DTO/GetAuthorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/author/DTO/GetAuthorsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/author/DTO/PostAuthorRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/author/DTO/PutAuthorRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/author/controller/AuthorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/author/entity/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/author/repository/AuthorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/author/service/AuthorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/DTO/GetBookResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/DTO/GetBooksByAuthorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/DTO/GetBooksResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/DTO/PostBookRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/DTO/PutBookRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/book/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/configuration/InitializedData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/dataStore/DataStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/java/project/serialization/CloningUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usersModule/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GfTeCI3lQ33tMVtHzyH5VPFG5K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="h2" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="temurin-11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/booksModule/src/main/java" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab3\booksModule\src\main\java" />
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab3\gateway\src\main\java" />
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab3\usersModule\src\main\java" />
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab3\usersModule\src\main\resources" />
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab3\gateway\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab3\booksModule" />
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab3\gateway" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayApplication (1)">
+    <configuration name="rest-api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/rest-api.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/rest-api.http" index="10" requestIdentifier="#10" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/rest-api.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/rest-api.http" index="8" requestIdentifier="#8" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api | #9" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/rest-api.http" index="9" requestIdentifier="#9" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="BooksModuleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="booksModule" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="lab3.booksmodule.BooksModuleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="project.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="lab3.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="lab3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="project.LabApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LabApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="project.LabApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LabApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="usersModule" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="project.LabApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LabApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="booksModule" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="project.LabApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersModuleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="usersModule" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="lab3.usersmodule.UsersModuleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.rest-api | #1" />
+        <item itemvalue="HTTP Request.rest-api | #8" />
+        <item itemvalue="HTTP Request.rest-api | #9" />
+        <item itemvalue="HTTP Request.rest-api | #2" />
+        <item itemvalue="HTTP Request.rest-api | #10" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ebfb810-2ecc-43db-a3c9-6c1a589688b5" name="Changes" comment="" />
+      <created>1666778738619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666778738619</updated>
+      <workItem from="1666778743612" duration="2723000" />
+      <workItem from="1666788721730" duration="162000" />
+      <workItem from="1666788935426" duration="851000" />
+      <workItem from="1667219001150" duration="3364000" />
+      <workItem from="1667391104198" duration="7694000" />
+      <workItem from="1667600051367" duration="14305000" />
+      <workItem from="1667832755201" duration="721000" />
+      <workItem from="1667833590041" duration="2844000" />
+      <workItem from="1667838183949" duration="931000" />
+      <workItem from="1667839296326" duration="9734000" />
+      <workItem from="1667898253038" duration="2768000" />
+      <workItem from="1668852934899" duration="2981000" />
+    </task>
+    <task id="LOCAL-00001" summary="testing intelliJ GitHub extension">
+      <created>1666789491636</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666789491636</updated>
+    </task>
+    <task id="LOCAL-00002" summary="small fixes">
+      <created>1667902666903</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667902666903</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="testing intelliJ GitHub extension" />
+    <MESSAGE value="small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fixes" />
+  </component>
+</project>

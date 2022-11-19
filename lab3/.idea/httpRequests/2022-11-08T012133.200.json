@@ -1,0 +1,20 @@
+{
+  "authors": [
+    {
+      "name": "John Smith",
+      "country": "USA"
+    },
+    {
+      "name": "Jan Kowalski",
+      "country": "Poland"
+    },
+    {
+      "name": "William John",
+      "country": "United Kingdom"
+    },
+    {
+      "name": "asdf",
+      "country": "Pol"
+    }
+  ]
+}

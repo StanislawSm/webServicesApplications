@@ -1,0 +1,20 @@
+{
+  "books": [
+    {
+      "isbn": 1,
+      "title": "Something"
+    },
+    {
+      "isbn": 3,
+      "title": "Best things"
+    },
+    {
+      "isbn": 4,
+      "title": "Worst things"
+    },
+    {
+      "isbn": 5,
+      "title": "Kujawy"
+    }
+  ]
+}
