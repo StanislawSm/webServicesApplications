@@ -14,7 +14,7 @@ public class AuthorEventRepository {
     private RestTemplate restTemplate;
 
     @Autowired
-    public AuthorEventRepository(@Value("${rpg.characters.url}") String baseUrl) {
+    public AuthorEventRepository(@Value("${lab.books.url}") String baseUrl) {
         restTemplate = new RestTemplateBuilder().rootUri(baseUrl).build();
     }
 

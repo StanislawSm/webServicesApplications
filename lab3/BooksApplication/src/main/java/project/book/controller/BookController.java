@@ -17,18 +17,16 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/books")
-public class BooksController {
+public class BookController {
 
-    private BookService bookService;
-    private AuthorService authorService;
+    private final BookService bookService;
 
     @Autowired
-    public BooksController(BookService bookService, AuthorService authorService) {
+    public BookController(BookService bookService, AuthorService authorService) {
         this.bookService = bookService;
-        this.authorService = authorService;
     }
 
-    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @GetMapping
     public ResponseEntity<GetBooksResponse> getBooks() {
         return ResponseEntity
                 .ok(GetBooksResponse.entityToDtoMapper().apply(bookService.findAll()));
@@ -36,23 +34,23 @@ public class BooksController {
 
     @GetMapping("{isbn}")
     public ResponseEntity<GetBookResponse> getBook(@PathVariable("isbn") long isbn) {
-        return bookService.find(isbn)
-                .map(value -> ResponseEntity
-                        .ok(GetBookResponse.entityToDtoMapper().apply(value)))
-                .orElseGet(() -> ResponseEntity
-                        .notFound()
-                        .build());
+        Optional<Book> book = bookService.find(isbn);
+        return book.map(value -> ResponseEntity.ok(GetBookResponse.entityToDtoMapper().apply(value)))
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public ResponseEntity<Void> postCharacter(@RequestBody PostBookRequest request, UriComponentsBuilder builder) {
-
+    public ResponseEntity<Void> postBook(@RequestBody PostBookRequest request, UriComponentsBuilder builder) {
         Book book = PostBookRequest
-                .dtoToEntityMapper(name -> authorService.find(name).orElseThrow())
+                .dtoToEntityMapper(() -> null)
                 .apply(request);
+
         book = bookService.create(book);
-        return ResponseEntity.created(builder.pathSegment("api", "books", "{isbm}")
-                .buildAndExpand(book.getIsbn()).toUri()).build();
+        return ResponseEntity
+                .created(builder
+                        .pathSegment("api", "books", "{isbn}")
+                        .buildAndExpand(book.getIsbn()).toUri())
+                .build();
     }
 
     @DeleteMapping("{isbn}")

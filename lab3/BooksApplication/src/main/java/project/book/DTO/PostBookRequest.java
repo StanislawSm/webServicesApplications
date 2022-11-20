@@ -5,6 +5,7 @@ import project.book.entity.Book;
 import lombok.*;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * A DTO for the {@link Book} entity
@@ -17,16 +18,15 @@ import java.util.function.Function;
 @ToString
 @EqualsAndHashCode
 public class PostBookRequest {
-    private Long isbn;
     private String title;
-    private String author;
     private int yearOfPublication;
+    private String author;
 
-    public static Function<PostBookRequest, Book> dtoToEntityMapper(Function<String, Author> authorFunction) {
+    public static Function<PostBookRequest, Book> dtoToEntityMapper(Supplier<Author> authorSupplier) {
         return request -> Book.builder()
-                .author(authorFunction.apply(request.getAuthor()))
                 .title(request.getTitle())
                 .yearOfPublication(request.getYearOfPublication())
+                .author(authorSupplier.get())
                 .build();
     }
 }

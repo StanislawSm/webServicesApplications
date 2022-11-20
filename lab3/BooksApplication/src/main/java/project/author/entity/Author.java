@@ -17,7 +17,6 @@ import java.util.List;
 @EqualsAndHashCode
 @Entity
 @Table(name = "authors")
-
 public class Author implements Serializable {
 
     @Id

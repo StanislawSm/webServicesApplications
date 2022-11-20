@@ -7,7 +7,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import project.author.DTO.GetAuthorResponse;
 import project.author.DTO.GetAuthorsResponse;
 import project.author.DTO.PostAuthorRequest;
-import project.author.DTO.PutAuthorRequest;
 import project.author.entity.Author;
 import project.author.service.AuthorService;
 

@@ -28,6 +28,15 @@ public class BookService {
         return bookRepository.findById(isbn);
     }
 
+    public Optional<Book> find(String authorName, Long isbn) {
+        Optional<Author> user = authorRepository.findById(authorName);
+        if (user.isPresent()) {
+            return bookRepository.findByIsbnAndAuthor(isbn, user.get());
+        } else {
+            return Optional.empty();
+        }
+    }
+
     public List<Book> findAll() {
         return bookRepository.findAll();
     }

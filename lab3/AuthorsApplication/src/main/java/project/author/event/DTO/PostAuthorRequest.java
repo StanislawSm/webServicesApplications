@@ -22,14 +22,8 @@ import java.util.function.Function;
 
 public class PostAuthorRequest {
 
-    /**
-     * User's login.
-     */
     private String name;
 
-    /**
-     * @return mapper for convenient converting dto object to entity object
-     */
     public static Function<Author, PostAuthorRequest> entityToDtoMapper() {
         return entity -> PostAuthorRequest.builder()
                 .name(entity.getName())

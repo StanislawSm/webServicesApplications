@@ -12,41 +12,26 @@ import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
 import java.util.Collections;
 
-/**
- * Application main class.
- */
 @SpringBootApplication
 public class GatewayApplication {
 
-    /**
-     * Application main entry point. Starts Spring Boot application context.
-     *
-     * @param args command line arguments
-     */
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
     }
 
-    /**
-     * Generally the {@link Bean} annotated methods are producer methods returning Spring configuration beans. This
-     * method registers Gateway routing rules.
-     *
-     * @param builder provided route locator builder
-     * @return route locator with defined routes
-     */
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder
                 .routes()
-                .route("users", r -> r
+                .route("authors", r -> r
                         .host("localhost:8080")
                         .and()
-                        .path("/api/users/{login}", "/api/users")
+                        .path("/api/authors/{name}", "/api/authors")
                         .uri("http://localhost:8081"))
-                .route("characters", r -> r
+                .route("books", r -> r
                         .host("localhost:8080")
                         .and()
-                        .path("/api/characters", "/api/characters/**", "/api/users/{login}/characters", "/api/users/{login}/characters/**")
+                        .path("/api/books", "/api/books/**", "/api/authors/{name}/books", "/api/authors/{name}/books/**")
                         .uri("http://localhost:8082"))
                 .build();
     }
