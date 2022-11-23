@@ -15,7 +15,8 @@ Content-Type: application/json
 
 {
   "title": "test1",
-  "yearOfPublication": 1562
+  "yearOfPublication": 1562,
+  "author": "Jan Kowalski"
 }
 
 ###

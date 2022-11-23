@@ -20,14 +20,14 @@ import java.util.function.Function;
 public class GetBookResponse {
     private Long isbn;
     private String title;
-//    private String author;
+    private String author;
     private int yearOfPublication;
 
     public static Function<Book, GetBookResponse> entityToDtoMapper() {
         return book -> GetBookResponse.builder()
                 .isbn(book.getIsbn())
                 .title(book.getTitle())
-//                .author()
+                .author(book.getAuthor().getName())
                 .yearOfPublication(book.getYearOfPublication())
                 .build();
     }

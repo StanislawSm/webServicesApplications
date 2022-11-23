@@ -5,6 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
+import project.author.entity.Author;
 import project.author.service.AuthorService;
 import project.book.DTO.GetBookResponse;
 import project.book.DTO.GetBooksResponse;
@@ -20,10 +21,12 @@ import java.util.Optional;
 public class BookController {
 
     private final BookService bookService;
+    private final AuthorService authorService;
 
     @Autowired
     public BookController(BookService bookService, AuthorService authorService) {
         this.bookService = bookService;
+        this.authorService = authorService;
     }
 
     @GetMapping
@@ -41,16 +44,21 @@ public class BookController {
 
     @PostMapping
     public ResponseEntity<Void> postBook(@RequestBody PostBookRequest request, UriComponentsBuilder builder) {
-        Book book = PostBookRequest
-                .dtoToEntityMapper(() -> null)
-                .apply(request);
+        Optional<Author> author = authorService.find(request.getAuthor());
+        if (author.isPresent()){
+            Book book = PostBookRequest
+                    .dtoToEntityMapper(author::get)
+                    .apply(request);
 
-        book = bookService.create(book);
-        return ResponseEntity
-                .created(builder
-                        .pathSegment("api", "books", "{isbn}")
-                        .buildAndExpand(book.getIsbn()).toUri())
-                .build();
+            book = bookService.create(book);
+            return ResponseEntity
+                    .created(builder
+                            .pathSegment("api", "books", "{isbn}")
+                            .buildAndExpand(book.getIsbn()).toUri())
+                    .build();
+        } else{
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping("{isbn}")

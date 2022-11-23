@@ -54,16 +54,6 @@ DELETE http://localhost:8080/api/authors/Jan Kowalski
 
 ###
 
-PUT http://localhost:8080/api/authors/asdf
-Content-Type: application/json
-
-{
-  "yearOfBirth": 1486,
-  "country": "Polska"
-}
-
-###
-
 POST http://localhost:8080/api/authors
 Content-Type: application/json
 
@@ -72,3 +62,16 @@ Content-Type: application/json
   "yearOfBirth": 1489,
   "country": "Pol"
 }
+
+###
+
+#not implemented
+PUT http://localhost:8080/api/authors/asdf
+Content-Type: application/json
+
+{
+  "yearOfBirth": 1486,
+  "country": "Polska"
+}
+
+
