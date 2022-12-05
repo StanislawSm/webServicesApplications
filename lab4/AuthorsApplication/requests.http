@@ -1,0 +1,32 @@
+GET http://localhost:8081/api/authors
+
+###
+
+GET http://localhost:8081/api/authors/Jan Kowalski
+
+###
+
+DELETE http://localhost:8081/api/authors/Jan Kowalski
+
+###
+
+POST http://localhost:8081/api/authors
+Content-Type: application/json
+
+{
+  "name": "Jan Kowalski",
+  "yearOfBirth": 200,
+  "country": "Nepal"
+}
+
+###
+
+##not implemented
+
+#PUT http://localhost:8081/api/authors/Jan Kowalski
+#Content-Type: application/json
+#
+#{
+#  "yearOfBirth": 1564,
+#  "country": "Panama"
+#}

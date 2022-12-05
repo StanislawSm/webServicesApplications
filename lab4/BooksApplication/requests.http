@@ -1,0 +1,37 @@
+GET http://localhost:8082/api/books
+
+###
+
+GET http://localhost:8082/api/books/1
+
+###
+
+GET http://localhost:8082/api/books/6
+
+###
+
+POST http://localhost:8082/api/books
+Content-Type: application/json
+
+{
+  "title": "test1",
+  "yearOfPublication": 1562,
+  "author": "Jan Kowalski"
+}
+
+###
+
+PUT http://localhost:8082/api/books/5
+Content-Type: application/json
+
+{
+  "title": "Kójawy",
+  "yearOfPublication": 2034
+}
+
+###
+
+DELETE http://localhost:8082/api/books/5
+
+###
+
