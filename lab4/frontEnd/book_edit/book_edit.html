@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="ISA labs"/>
+        <title>lab 4</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <link rel="stylesheet" href="book_edit.css"/>
+        <script src="../script.js" defer="defer"></script>
+        <script type="module" src="book_edit.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>lab 4</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="index.html">homepage</a></li>
+                    <li><a href="../author_list/author_list.html">authors</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2>Edit book</h2></header>
+                    <form class="book__form" id="infoForm">
+
+                        <label for="isbn">ISBN:</label>
+                        <span id="isbn">isbn</span>
+
+                        <label for="title">title:</label>
+                        <input class="ui-control ui-input" id="title" name="title"/>
+
+                        <label for="yearOfPublication">year of publication:</label>
+                        <input class="ui-control ui-input" id="yearOfPublication" name="yearOfPublication" type="number"/>
+
+                        <input class="ui-control ui-button" type="submit" name="Update" value="send"/>
+                    </form>
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

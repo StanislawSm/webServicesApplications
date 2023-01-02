@@ -7,6 +7,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import project.author.DTO.GetAuthorResponse;
 import project.author.DTO.GetAuthorsResponse;
 import project.author.DTO.PostAuthorRequest;
+import project.author.DTO.PutAuthorRequest;
 import project.author.entity.Author;
 import project.author.service.AuthorService;
 
@@ -65,4 +66,19 @@ public class AuthorController {
         }
     }
 
+    @PutMapping("{name}")
+    public ResponseEntity<Void> putAuthor(@RequestBody PutAuthorRequest request, @PathVariable("name") String name) {
+        Optional<Author> author = authorService.find(name);
+        if (author.isPresent()) {
+            PutAuthorRequest.dtoToEntityUpdater().apply(author.get(), request);
+            authorService.update(author.get());
+            return ResponseEntity
+                    .accepted()
+                    .build();
+        } else {
+            return ResponseEntity
+                    .notFound()
+                    .build();
+        }
+    }
 }

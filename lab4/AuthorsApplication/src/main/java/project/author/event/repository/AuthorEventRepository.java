@@ -25,4 +25,5 @@ public class AuthorEventRepository {
     public void create(Author author) {
         restTemplate.postForLocation("/authors", PostAuthorRequest.entityToDtoMapper().apply(author));
     }
+
 }

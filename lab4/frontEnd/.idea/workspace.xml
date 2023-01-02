@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e62ffabb-e570-46d1-9547-795c224225cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0b6c45db-5609-4163-91cd-e1ffb741f754" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/author_add/author_add.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_add/author_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_add/author_add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_edit/author_edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_edit/author_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_edit/author_edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_list/author_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_list/author_list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_view/author_view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_view/author_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author_view/author_view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_add/book_add.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_add/book_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_add/book_add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_edit/book_edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_edit/book_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_edit/book_edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/configuration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/dom_utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/DTO/PutAuthorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/DTO/PutAuthorRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/event/repository/AuthorEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/event/repository/AuthorEventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/service/AuthorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +40,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="2ISaA3N3go9YRE9Vy5bn6YELiNr" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ITNZC1GdxqozONO7Ja5VOpBo35" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
@@ -25,22 +54,62 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_interpreter_path" value="$APPLICATION_CONFIG_DIR$/node/node-v14.15.0-win-x64/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/book_add" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab4\frontEnd\book_add" />
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab4\frontEnd\author_edit" />
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab4\frontEnd" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e62ffabb-e570-46d1-9547-795c224225cf" name="Changes" comment="" />
-      <created>1670177292636</created>
+      <changelist id="0b6c45db-5609-4163-91cd-e1ffb741f754" name="Changes" comment="" />
+      <created>1670201667882</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670177292636</updated>
-      <workItem from="1670177293896" duration="1715000" />
+      <updated>1670201667882</updated>
+      <workItem from="1670201669195" duration="222000" />
+      <workItem from="1670269686379" duration="7704000" />
+      <workItem from="1670316756522" duration="5078000" />
+      <workItem from="1671475110587" duration="8714000" />
+      <workItem from="1671528348623" duration="4779000" />
+      <workItem from="1672221541206" duration="86000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

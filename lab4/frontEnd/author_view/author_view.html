@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="ISA labs"/>
+        <title>lab 4</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <link rel="stylesheet" href="author_view.css"/>
+        <script src="../script.js" defer="defer"></script>
+        <script type="module" src="author_view.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>lab 4</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">homepage</a></li>
+                    <li><a href="../author_list/author_list.html">authors</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2 id="authorName">author name</h2></header>
+                    <section>
+                        <h3>Details</h3>
+                        <div class="details-grid">
+                            <label for="country">Country:</label>
+                            <span id="country">country</span>
+
+                            <label for="yearOfBirth">Year of birth:</label>
+                            <span id="yearOfBirth">yearOfBirth</span>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Books</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>title</th>
+                                    <th>edit</th>
+                                    <th>delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr>
+                                    <td>name</td>
+                                    <td><a href="#">edit</a></td>
+                                    <td>
+                                        <button class="ui-button ui-control">delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="add_book"></div>
+                    </section>
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

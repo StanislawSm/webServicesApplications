@@ -3,9 +3,8 @@ package project.author.DTO;
 import lombok.*;
 import project.author.entity.Author;
 
-/**
- * A DTO for the {@link Author} entity
- */
+import java.util.function.BiFunction;
+
 @Getter
 @Setter
 @Builder
@@ -16,7 +15,14 @@ import project.author.entity.Author;
 public class PutAuthorRequest {
 
     private int yearOfBirth;
-
     private String country;
+
+    public static BiFunction<Author, PutAuthorRequest, Author> dtoToEntityUpdater() {
+        return (author, request) -> {
+            author.setCountry(request.getCountry());
+            author.setYearOfBirth(request.getYearOfBirth());
+            return author;
+        };
+    }
 
 }

@@ -41,5 +41,11 @@ public class AuthorService {
         eventRepository.delete(author);
         repository.delete(author);
     }
+
+    @Transactional
+    public void update(Author author) {
+        repository.save(author);
+        eventRepository.create(author);
+    }
 }
 
