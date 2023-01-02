@@ -3,9 +3,7 @@ import {getBackendUrl} from '../js/configuration.js';
 
 window.addEventListener('load', () => {
     const infoForm = document.getElementById('infoForm');
-
     infoForm.addEventListener('submit', event => updateInfoAction(event));
-
     getAndShowBook();
 });
 

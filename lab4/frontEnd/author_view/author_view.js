@@ -43,6 +43,8 @@ function createTableRow(book) {
     tr.appendChild(createLinkCell('edit', '../book_edit/book_edit.html?author='
         + getParameterByName('author') + '&book=' + book.isbn));
     tr.appendChild(createButtonCell('delete', () => deleteBook(book)));
+    tr.appendChild(createLinkCell('view', '../book_view/book_view.html?author='
+        + getParameterByName('author') + '&book=' + book.isbn));
     return tr;
 }
 

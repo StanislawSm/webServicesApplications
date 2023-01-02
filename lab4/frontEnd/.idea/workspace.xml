@@ -2,35 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b6c45db-5609-4163-91cd-e1ffb741f754" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/author_add/author_add.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_add/author_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_add/author_add.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_edit/author_edit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_edit/author_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_edit/author_edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_list/author_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_list/author_list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_view/author_view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_view/author_view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author_view/author_view.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_add/book_add.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_add/book_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_add/book_add.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_edit/book_edit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_edit/book_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_edit/book_edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/configuration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/dom_utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/DTO/PutAuthorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/DTO/PutAuthorRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/controller/AuthorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/event/repository/AuthorEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/event/repository/AuthorEventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthorsApplication/src/main/java/project/author/service/AuthorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_view/book_view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_view/book_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_view/book_view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author_view/author_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/author_view/author_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author_view/author_view.js" beforeDir="false" afterPath="$PROJECT_DIR$/author_view/author_view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_edit/book_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/book_edit/book_edit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +32,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/book_add" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/book_view" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab4\frontEnd\book_view" />
       <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab4\frontEnd\book_add" />
       <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab4\frontEnd\author_edit" />
       <recent name="C:\Users\User\Documents\sem5\AUI\webServicesApplications\lab4\frontEnd" />
@@ -95,6 +74,7 @@
       <workItem from="1671475110587" duration="8714000" />
       <workItem from="1671528348623" duration="4779000" />
       <workItem from="1672221541206" duration="86000" />
+      <workItem from="1672682504868" duration="1681000" />
     </task>
     <servers />
   </component>
